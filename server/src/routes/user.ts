@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken'
 import { JWT_USER_SECRET } from '../config/env'
 import { auth } from '../middleware/auth'
 
-const userRouter = Router()
+export const userRouter = Router()
 
 userRouter.post('/signup', async function(req: Request, res: Response){
     const { username, password } = req.body
