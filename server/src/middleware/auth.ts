@@ -2,7 +2,7 @@ import { Request, Response, NextFunction} from 'express'
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import { JWT_USER_SECRET } from '../config/env'
 
-function auth(req: Request, res: Response, next: NextFunction){
+export function auth(req: Request, res: Response, next: NextFunction){
     const token = req.headers.authorization
 
     if(token){

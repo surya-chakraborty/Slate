@@ -19,10 +19,10 @@ const UserSchema = new Schema({
 const ContentSchema = new Schema({
     title: String,
     link: String,
-    tags: {
+    tags: [{
         type: mongoose.Types.ObjectId,
         ref: 'Tag'
-    },
+    }],
     type: String,
     userId: {
         type: mongoose.Types.ObjectId,
